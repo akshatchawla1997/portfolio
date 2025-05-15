@@ -74,7 +74,7 @@ const Home = () => {
               <Slide>
                 <h1 className="font-bold text-3xl">Akshat Chawla</h1>
               </Slide>
-              2+ years of experience as Web Developer with a specialization in
+              5+ years of experience as Web Developer with a specialization in
               <span className="font-semibold text-blue-500">
                 {" "}
                 <Typewriter
@@ -86,10 +86,14 @@ const Home = () => {
                     "Node.js Developer",
                     "Python Developer",
                     "Django Developer",
+                    "AI/ML Developer",
+                    "wordpress Developer",
+                    "shopify Developer",
+                    "mobile app developer",
                   ]}
                 />{" "}
               </span>
-              , based in Noida, Uttar Pradesh, India. I'm a passionate engineer
+              , based in Dehradun, Uttarakhand, India. I'm a passionate engineer
               eager to contribute my skills and collaborate with teams around
               the world.
             </p>
