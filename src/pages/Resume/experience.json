@@ -1,6 +1,14 @@
 [
     {
-        "date":"March 2024 to Present",
+        "date":"October 2024 to December 2024",
+        "company_name":"Momentus Digital",
+        "description":"",
+        "tech_stack":"Mysql, Rasa, React.js, Node.js, Redux, Tanstack, Python, Django, Express.js, FastAPI, AI/ML",
+        "logo":"",
+        "job_title":"Full Stack Developer"
+    },
+    {
+        "date":"Dec 2024 to September 2024",
         "company_name":"Mobrilz",
         "description":"",
         "tech_stack":"Mysql, Next.js, Rasa, React.js, Node.js, Redux, Tanstack, Python, Django, Express.js",
@@ -8,15 +16,7 @@
         "job_title":"Full Stack Developer"
     },
     {
-        "date":"Dec 2023 to Feb 2024",
-        "company_name":"Plutos One",
-        "description":"",
-        "tech_stack":"Mysql, Node.js, Python, Django, Rasa, Express.js",
-        "logo":"https://media.licdn.com/dms/image/D4D0BAQHDZ6bRG2jN0w/company-logo_100_100/0/1695116409828/plutos_one_logo?e=1721260800&v=beta&t=8qVRMDLvtA-hX_6IkneT4ociA9O67ERAXsRbtv8VdCM",
-        "job_title":"Full Stack Developer"
-    },
-    {
-        "date":"July 2022 to Dec 2023",
+        "date":"April 2022 to Dec 2023",
         "company_name":"Pando India Software Consultant",
         "description":"",
         "tech_stack":"Mysql, React.js, Node.js, Redux, Tanstack, Python, Django, Express.js",
@@ -24,11 +24,11 @@
         "job_title":"Full Stack Developer"
     },
     {
-        "date":"April 2022 to Jun 2022",
-        "company_name":"TechCompiler Datasystems pvt. ltd.",
+        "date":"November 2019 to Jun 2022",
+        "company_name":"Resonance International Inc.",
         "description":"",
-        "tech_stack":"Mysql, Javascript, HTML, CSS, React.js",
-        "logo":"https://media.licdn.com/dms/image/D4D0BAQGBIf7kd4x2Rg/company-logo_200_200/0/1697021539997/elephas_technologies_pvt__ltd_logo?e=1721260800&v=beta&t=SLaEvqGsBEiyjPXpPpz4o4NxZUYY2LgMkZQ78JC8ECg",
+        "tech_stack":"Mysql, Javascript, HTML, CSS, React.js, Node.js, Redux, Tanstack, Python, Django, Express.js",
+        "logo":"",
         "job_title":"Software Engineer"
     },
     {

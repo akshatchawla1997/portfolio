@@ -65,8 +65,9 @@ const About = () => {
               <h1 className="text-darkHeadingColor mb-4">About Me</h1>
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">
-              A dedicated software engineer with 2 years of diverse development experience across various technology stacks.
-              I specialize in both frontend and backend development, with a passion for creating seamless and intuitive web applications.
+              A dedicated software engineer with 5+ years of diverse development experience across various technology stacks.
+              I specialize in both frontend and backend development, with application development and integrated and trained AI
+              model like chatbots and other services, with a passion for creating seamless and intuitive web applications.
             </p>
           </div>
         </motion.div>
