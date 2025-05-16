@@ -74,7 +74,7 @@ const Home = () => {
               <Slide>
                 <h1 className="font-bold text-3xl">Akshat Chawla</h1>
               </Slide>
-              5+ years of experience as Web Developer with a specialization in
+              7+ years of experience as Web Developer with a specialization in
               <span className="font-semibold text-blue-500">
                 {" "}
                 <Typewriter

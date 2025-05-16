@@ -34,9 +34,18 @@
     {
         "date":"Feb 2019 to Sept 2019",
         "company_name":"Bharat Electronics Ltd.",
-        "description":"",
+        "description":"Doing Internship in Bharat Electronics Ltd. in the field of Software Developer.",
         "tech_stack":"Mysql, Java, JavaFX, Hibernate",
         "logo":"https://imgs.search.brave.com/iI8b9_GYMI7UD7IxEBTR_V2Ztr-_46_aljXXFpaa4P0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9lL2U4L0Jl/bF9sb2dvLmpwZy8y/MjBweC1CZWxfbG9n/by5qcGc",
         "job_title":"Java Developer Trainee"
+    },
+    
+    {
+        "date":"Feb 2017 to Sept 2019",
+        "company_name":"Freelancer.",
+        "description":"Freelancing in the field of Wordpress and Shopify.",
+        "tech_stack":"Mysql, Java, JavaFX, Hibernate",
+        "logo":"",
+        "job_title":"Wordpress and Shopify Developer"
     }
 ]
