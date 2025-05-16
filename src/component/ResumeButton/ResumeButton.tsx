@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import resumePDF from '/src/assets/resume/AkshatChawla.pdf';
+import resumePDF from '/src/assets/resume/akshatchawla.pdf';
 import { FaDownload } from "react-icons/fa";
 import SendMail from './SendMail';
 
