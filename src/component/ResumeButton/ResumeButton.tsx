@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import resumePDF from '/src/assets/resume/akshatchawlaresume.pdf';
+import resumePDF from '/src/assets/resume/AkshatChawla.pdf';
 import { FaDownload } from "react-icons/fa";
 import SendMail from './SendMail';
 
@@ -55,13 +55,13 @@ export const Resume = () => {
                 >
                 Download CV <FaDownload className='px-1.5 text-center absolute top-3 right-0.5 text-xl' />
             </button>
-            <button
+            {/* <button
                 className={`relative bg-emerald-400 hover:bg-teal-600 ml-32 mt-3 text-white font-bold py-2 px-4 rounded-sm shadow-lg ${showSendMail ? 'hidden' : ''}`}
                 onClick={handleEmailCv}
                 disabled={showSendMail}
                 >
                 CV on mail
-            </button>
+            </button> */}
             {showSendMail && <SendMail onClose={handleCloseSendMail} />}
             {showProgressBar && (
                 <div className="relative w-[7rem] h-2 bg-[#ff577f] mt-3 rounded-full">

@@ -57,7 +57,7 @@ const VennDiagram = () => {
           </div>
           <div className="text-2xl pt-20">
             <p>
-              I'm a web Developer with more than 2 years of professional
+              I'm a web Developer with more than 7 years of professional
               experience. If you're looking for "Full Stack Development", you'd
               better change direction! In my works I always try to combine
               aesthetic with functional aspects, looking for the right balance
