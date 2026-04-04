@@ -1,7 +1,8 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-import  Loader from "../src/component/PortfolioLoader/Loader";
+import Loader from "../src/component/PortfolioLoader/Loader";
+import Seo from "./component/Seo";
 
 const Layout = lazy(() => import("./component/Layout/Layout"));
 const Home = lazy(() => import("./pages/Home"));
@@ -10,36 +11,51 @@ const Contact = lazy(() => import("./pages/ContactForm/Contact"));
 const Resume = lazy(() => import("./pages/Resume/Resume"));
 const Work = lazy(() => import("./pages/Works/Work"));
 
+const defaultTitle = "Akshat Chawla Portfolio";
+const routeTitles: Record<string, string> = {
+  "/": `Home | ${defaultTitle}`,
+  "/About": `About | ${defaultTitle}`,
+  "/Contact": `Contact | ${defaultTitle}`,
+  "/Resume": `Resume | ${defaultTitle}`,
+  "/Work": `Work | ${defaultTitle}`,
+};
+
 function AppRoutes() {
   const location = useLocation();
+  const [currentTitle, setCurrentTitle] = useState(defaultTitle);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
   useEffect(() => {
+    const nextTitle = routeTitles[location.pathname] ?? defaultTitle;
+    setCurrentTitle(nextTitle);
+
+    if (document.visibilityState === "visible") {
+      document.title = nextTitle;
+    }
+  }, [location]);
+
+  useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        document.title = 'Akshat Chawla Portfolio';
-      } else {
-        document.title = '😢 Missing You';
-      }
+      document.title = document.visibilityState === "visible" ? currentTitle : "😢 Missing You";
     };
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    document.title = 'Akshat Chawla Portfolio';
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    handleVisibilityChange();
 
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [currentTitle]);
 
   return (
     <Routes>
       <Route
         path="/"
         element={
-          <Suspense fallback={<Loader/>}>
+          <Suspense fallback={<Loader />}> 
             <Layout />
           </Suspense>
         }
@@ -47,7 +63,8 @@ function AppRoutes() {
         <Route
           index
           element={
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<Loader />}>
+              <Seo title={routeTitles['/']} />
               <Home />
             </Suspense>
           }
@@ -55,7 +72,8 @@ function AppRoutes() {
         <Route
           path="/About"
           element={
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<Loader />}>
+              <Seo title={routeTitles['/About']} />
               <About />
             </Suspense>
           }
@@ -63,7 +81,8 @@ function AppRoutes() {
         <Route
           path="/Contact"
           element={
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<Loader />}>
+              <Seo title={routeTitles['/Contact']} />
               <Contact />
             </Suspense>
           }
@@ -71,7 +90,8 @@ function AppRoutes() {
         <Route
           path="/Resume"
           element={
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<Loader />}>
+              <Seo title={routeTitles['/Resume']} />
               <Resume />
             </Suspense>
           }
@@ -79,13 +99,13 @@ function AppRoutes() {
         <Route
           path="/Work"
           element={
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<Loader />}>
+              <Seo title={routeTitles['/Work']} />
               <Work />
             </Suspense>
           }
         />
       </Route>
-
     </Routes>
   );
 }

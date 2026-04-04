@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import { HiMenu, HiX, HiMoon, HiOutlineSun } from "react-icons/hi";
 import NavigationLinks from "./NavigationLinks";
-import profileImg from "../../assets/Profile/profile.png";
-import { Typewriter } from 'react-simple-typewriter'
 export function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
@@ -34,16 +31,7 @@ export function Header() {
     <header className="w-full bg-white dark:bg-slate-950/95">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-300 dark:border-white/20 shadow-lg">
-            <img
-              src={profileImg}
-              alt="Akshat Chawla"
-              className="w-full h-full object-cover"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            />
-          </div>
-          <div className="hidden lg:block">
+          <div>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Hi, I'm</p>
             <p className="text-slate-900 dark:text-white font-semibold">Akshat Chawla</p>
           </div>

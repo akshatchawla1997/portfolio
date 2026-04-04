@@ -29,15 +29,21 @@ body {
 
 .dark body {
   background-color: #020817;
-  color: #e2e8f0;
+  color: #f8fafc;
 }
 
 .dark .text-textColor {
-  color: #cbd5e1;
+  color: #f8fafc;
 }
 
 .dark .text-darkHeadingColor {
-  color: #e2e8f0;
+  color: #f8fafc;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-600,
+.dark .text-slate-400 {
+  color: #e5e7eb !important;
 }
 
 .dark .bg-slate-950\/5 {

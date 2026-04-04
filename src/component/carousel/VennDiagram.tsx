@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const VennDiagram = () => {
   return (
     <div id="homeAbout" className="rounded-3xl bg-slate-950/5 p-8 shadow-sm">
-      <h2 className="text-4xl font-bold mb-10">About Me</h2>
+      <h2 className="text-4xl font-bold mb-10 dark:text-slate-100">About Me</h2>
       <div className="flex flex-col lg:flex-row gap-10 items-center">
         <div className="max-w-full lg:max-w-[560px]">
           <svg width="520" height="520" viewBox="0 0 520 520">
@@ -55,21 +55,21 @@ const VennDiagram = () => {
           </svg>
         </div>
 
-        <div className="max-w-xl text-base leading-8 text-slate-700">
-          <p className="mb-4 text-lg font-semibold text-slate-900">
+        <div className="max-w-xl text-base leading-8 text-slate-700 dark:text-slate-100">
+          <p className="mb-4 text-lg font-semibold text-slate-900 dark:text-slate-100">
             I build systems and automated applications with frontend, backend,
             AI, and cloud engineering at the center.
           </p>
-          <p className="mb-4">
+          <p className="mb-4 dark:text-slate-100">
             With 7+ years of experience, I develop React and Next.js applications,
             train AI models, design orchestration workflows, and build APIs using
             Node.js, FastAPI, and Django.
           </p>
-          <p className="mb-4">
+          <p className="mb-4 dark:text-slate-100">
             I deploy reliable solutions on AWS, DigitalOcean, and GCP, with a focus
             on image classification, automation, and scalable systems.
           </p>
-          <p>
+          <p className="dark:text-slate-100">
             My goal is to create user-friendly, performant products that deliver
             real value while keeping architecture maintainable and efficient.
           </p>
