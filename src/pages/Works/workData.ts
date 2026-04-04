@@ -10,6 +10,13 @@ import hasthshilpLogo from './hasthshilpLogo.jpg';
 import hasthshilp from './hasthshilp.png';
 // company logo
 import PandoIndia from '../../assets/CompanyLogo/LogoPando.fdd261119702b077a65f.png'
+// Aonetech projects - using external images
+const AONETECH_MONEY_VISIONARIES = 'https://www.aonetech.in/_next/image?url=%2Fdownload11.png&w=1200&q=75';
+const AONETECH_INSPIRING_TOGETHER = 'https://www.aonetech.in/_next/image?url=%2Fdownload14.png&w=1200&q=75';
+const AONETECH_MULTIFOLKS = 'https://www.aonetech.in/_next/image?url=%2Fdownload12.png&w=1200&q=75';
+const AONETECH_MULTIFOLKS_FITCAM = 'https://www.aonetech.in/_next/image?url=%2Fdownload13.png&w=1200&q=75';
+const AONETECH_VANKAZO = 'https://www.aonetech.in/_next/image?url=%2Fdownload9.png&w=1200&q=75';
+const AONETECH_SOULSYNCING = 'https://www.aonetech.in/_next/image?url=%2Fdownload7.png&w=1200&q=75';
 
 export const projects = [
   {
@@ -67,7 +74,6 @@ export const projects = [
     organisationLogo: PandoIndia,
     description: "This online survey app integrates multiple vendors (Dynata, Voxco, Precision, Tap Research, Market Cube) providing diverse audience segments with varying qualifications, age groups, and more.",
   },
-  ,
   {
     name: 'SVTech',
     image: svtech,
@@ -89,5 +95,65 @@ export const projects = [
     organisationWorkedWith: "SVTech(freelancer)",
     organisationLogo: hasthshilpLogo,
     description: "HasthShilp is India's first National Award-winning eCommerce platform offering authentic handlooms and handicrafts directly from artisans and weavers. Their curated collection includes textiles, home décor, and lifestyle products that reflect India's rich cultural heritage. By connecting artisans directly with customers, HasthShilp ensures authenticity and supports the livelihoods of traditional craftsmen.",
+  },
+  {
+    name: 'Money Visionaries',
+    image: AONETECH_MONEY_VISIONARIES,
+    link: 'https://www.aonetech.in/our-work',
+    githubLink: '',
+    tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vercel'],
+    features: ['Financial Insights', 'Money Management', 'Analytics Dashboard', 'Real-time Updates'],
+    organisationWorkedWith: "Aonetech",
+    description: "Money Visionaries is a comprehensive financial management platform built with React and TypeScript, providing users with powerful tools to track, analyze, and manage their finances. The platform delivers real-time financial insights and analytics through an intuitive, responsive interface.",
+  },
+  {
+    name: 'Inspiring Together – NGO Volunteer & Senior Citizen Platform',
+    image: AONETECH_INSPIRING_TOGETHER,
+    link: 'https://www.aonetech.in/our-work',
+    githubLink: '',
+    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express.js', 'PostgreSQL', 'AWS'],
+    features: ['Volunteer Matching', 'Senior Citizen Support', 'Event Management', 'Community Engagement', 'Real-time Notifications'],
+    organisationWorkedWith: "Aonetech",
+    description: "Inspiring Together is a comprehensive NGO platform connecting volunteers with senior citizens for meaningful interactions and community support. Built with Next.js and TypeScript, it features volunteer matching systems, event management, and community engagement tools powered by Express.js backend and AWS infrastructure.",
+  },
+  {
+    name: 'MultiFolks – AI Powered Eyewear eCommerce',
+    image: AONETECH_MULTIFOLKS,
+    link: 'https://www.aonetech.in/our-work',
+    githubLink: '',
+    tags: ['React', 'FastAPI', 'Python', 'TensorFlow', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Vercel', 'MediaPipe'],
+    features: ['AI-Powered Recommendations', 'Virtual Try-on', 'Product Catalog', 'Payment Integration', 'AI Computer Vision'],
+    organisationWorkedWith: "Aonetech",
+    description: "MultiFolks is an innovative AI-powered eyewear eCommerce platform that uses computer vision and machine learning to provide personalized eyewear recommendations. Built with React frontend and FastAPI backend, it integrates TensorFlow and MediaPipe for advanced AI features including virtual try-on capabilities.",
+  },
+  {
+    name: 'MultiFolks AI Tool – Perfect Fit Cam',
+    image: AONETECH_MULTIFOLKS_FITCAM,
+    link: 'https://www.aonetech.in/our-work',
+    githubLink: '',
+    tags: ['React', 'TypeScript', 'Python', 'TensorFlow', 'FastAPI', 'Computer Vision', 'MediaPipe', 'PostgreSQL', 'Vercel'],
+    features: ['Real-time Face Detection', 'Virtual Eyewear Try-on', 'AI Sizing Algorithm', 'Camera Integration', 'Instant Recommendations'],
+    organisationWorkedWith: "Aonetech",
+    description: "Perfect Fit Cam is an advanced AI tool that leverages computer vision, TensorFlow, and MediaPipe to enable real-time virtual eyewear try-on. The application uses facial recognition and sizing algorithms to recommend the perfect eyewear fit, providing users with instant, accurate recommendations through their camera.",
+  },
+  {
+    name: 'Vankazo Dashboard',
+    image: AONETECH_VANKAZO,
+    link: 'https://www.aonetech.in/our-work',
+    githubLink: '',
+    tags: ['React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'GCP', 'GKE', 'Kubernetes'],
+    features: ['Data Analytics', 'Real-time Monitoring', 'Microservices Architecture', 'Cloud Deployment', 'Scalable Infrastructure'],
+    organisationWorkedWith: "Aonetech",
+    description: "Vankazo Dashboard is a powerful analytics and monitoring platform deployed on Google Cloud Platform with Kubernetes orchestration. Built with React and Node.js, it features real-time data monitoring, comprehensive analytics, and a microservices architecture for exceptional scalability and performance.",
+  },
+  {
+    name: 'soulsyncing',
+    image: AONETECH_SOULSYNCING,
+    link: 'https://www.aonetech.in/our-work',
+    githubLink: '',
+    tags: ['React Native', 'Python', 'Django', 'MySQL', 'Tailwind CSS', 'AWS'],
+    features: ['Cross-platform Mobile', 'Real-time Sync', 'User Management', 'Data Persistence', 'Cloud Backend'],
+    organisationWorkedWith: "Aonetech",
+    description: "soulsyncing is a React Native mobile application with a powerful Django backend, designed for seamless cross-platform functionality. It features real-time data synchronization, robust user management, and persistent data storage, all backed by AWS infrastructure for reliability and scalability.",
   },
 ];

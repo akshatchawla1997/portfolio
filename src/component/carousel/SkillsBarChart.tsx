@@ -1,55 +1,32 @@
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
-
-const data = [
-  { name: "HTML & CSS", level: 4 },
-  { name: "javascript", level: 11 },
-  { name: "ES6 & React", level: 6 },
-  { name: "Redux-Toolkit", level: 5 },
-  { name: "Node.js and Express.js", level: 10 },
-  { name: "python", level: 7 },
-  { name: "Django", level: 6 },
-  { name: "Rasa", level: 4 },
+const skills = [
+  { name: "HTML & CSS", level: 95, color: "from-orange-400 to-amber-500" },
+  { name: "JavaScript", level: 92, color: "from-yellow-400 to-orange-500" },
+  { name: "React & Next.js", level: 90, color: "from-sky-400 to-blue-500" },
+  { name: "Node.js", level: 88, color: "from-emerald-400 to-teal-500" },
+  { name: "FastAPI & Django", level: 84, color: "from-cyan-400 to-sky-500" },
+  { name: "Python", level: 88, color: "from-blue-400 to-indigo-500" },
+  { name: "AI / ML", level: 80, color: "from-fuchsia-400 to-pink-500" },
+  { name: "Cloud & DevOps", level: 82, color: "from-lime-400 to-emerald-500" },
 ];
 
 const SkillsBarChart = () => {
   return (
-    <>
-      <div className="flex">
-        <div className="flex-1 ">
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart
-              data={data}
-              margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" tick={{ angle: -45, textAnchor: 'end' }} />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="level" fill="#8884d8"/>
-            </BarChart>
-          </ResponsiveContainer>
+    <div className="grid gap-4 lg:grid-cols-2">
+      {skills.map((skill) => (
+        <div key={skill.name} className="rounded-3xl border border-slate-200 bg-white/90 p-5 shadow-lg dark:border-slate-700 dark:bg-slate-900">
+          <div className="flex items-center justify-between mb-3">
+            <span className="font-semibold text-slate-900 dark:text-slate-100">{skill.name}</span>
+            <span className="text-sm text-slate-600 dark:text-slate-300">{skill.level}%</span>
+          </div>
+          <div className="h-3 w-full rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+            <div
+              className={`h-full rounded-full bg-gradient-to-r ${skill.color}`}
+              style={{ width: `${skill.level}%` }}
+            />
+          </div>
         </div>
-        <div className="flex-1">
-          <ol>
-            <li className="border-b-2 text-3xl border-r-black border-r-4 pt-8">I'm <span className="font-semibold">master</span> of the universe</li>
-            <li className="border-b-2 text-3xl border-r-green-500 border-r-4 pt-8"><span className="font-semibold">High.</span>I'm preety good</li>
-            <li className="border-b-2 text-3xl border-r-lime-500 border-r-4 pt-8"><span className="font-semibold">Medium.</span>I'm trying to improve</li>
-            <li className="border-b-2 text-3xl border-r-yellow-500 border-r-4 pt-8"><span className="font-semibold">Basic.</span>You can't always win</li>
-            <li className="border-b-2 text-3xl border-r-red-500 border-r-4 pt-8"><span className="font-semibold">Uh!</span>Next Question?</li>
-          </ol>
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 

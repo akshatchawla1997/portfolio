@@ -4,38 +4,40 @@ const SocialMediaIcons = () => {
     const instagramLink = `https://www.instagram.com/akichawla1997/`;
     const gitHubLink = `https://github.com/akshatchawla1997`;
     const linkedInLink = `https://www.linkedin.com/in/akshat-sd1/`;
-    // const discord = ''
 
     return (
-        <ul className="flex gap-6 pt-48">
-            <li className="cursor-pointer group transform transition-transform duration-500 hover:scale-125">
+        <ul className="fixed right-4 top-1/3 z-50 hidden flex-col gap-4 md:flex">
+            <li className="group">
                 <a
                     href={linkedInLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="icon-link"
+                    className="flex items-center gap-3 rounded-full bg-slate-900/95 px-4 py-3 text-white shadow-xl transition hover:bg-sky-500 hover:text-slate-950"
                 >
-                    <TfiLinkedin className="icon" />
+                    <TfiLinkedin className="h-5 w-5" />
+                    <span className="hidden sm:inline">LinkedIn</span>
                 </a>
             </li>
-            <li className="cursor-pointer group transform transition-transform duration-500 hover:scale-125">
+            <li className="group">
                 <a
                     href={gitHubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="icon-link"
+                    className="flex items-center gap-3 rounded-full bg-slate-900/95 px-4 py-3 text-white shadow-xl transition hover:bg-slate-700"
                 >
-                    <TfiGithub className="icon" />
+                    <TfiGithub className="h-5 w-5" />
+                    <span className="hidden sm:inline">GitHub</span>
                 </a>
             </li>
-            <li className="cursor-pointer group transform transition-transform duration-500 hover:scale-125">
+            <li className="group">
                 <a
                     href={instagramLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="icon-link"
+                    className="flex items-center gap-3 rounded-full bg-slate-900/95 px-4 py-3 text-white shadow-xl transition hover:bg-pink-500"
                 >
-                    <TfiInstagram className="icon" />
+                    <TfiInstagram className="h-5 w-5" />
+                    <span className="hidden sm:inline">Instagram</span>
                 </a>
             </li>
         </ul>

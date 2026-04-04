@@ -69,16 +69,16 @@ export default function ContactForm() {
 
   return (
     <>
-      <form className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+      <form className="max-w-md mx-auto bg-white dark:bg-slate-950 shadow-md dark:shadow-black/20 rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+          <label htmlFor="name" className="block text-slate-900 dark:text-slate-100 text-sm font-bold mb-2">
             Your Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full p-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 rounded focus:outline-none focus:border-emerald-400"
             placeholder="Enter your Name"
             value={formData.name}
             onChange={handleInputChange}
@@ -86,14 +86,14 @@ export default function ContactForm() {
           {errors.name && <p className="text-red-500">{errors.name}</p>}
         </div>
         <div className="mb-4">
-          <label htmlFor="phoneNumber" className="block text-gray-700 text-sm font-bold mb-2">
+          <label htmlFor="phoneNumber" className="block text-slate-900 dark:text-slate-100 text-sm font-bold mb-2">
             Phone No.
           </label>
           <input
             type="text"
             id="phoneNumber"
             name="phoneNumber"
-            className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full p-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 rounded focus:outline-none focus:border-emerald-400"
             placeholder="Enter Your Phone No. With Country Code"
             value={formData.phoneNumber}
             onChange={handleInputChange}
@@ -101,14 +101,14 @@ export default function ContactForm() {
           {errors.phoneNumber && <p className="text-red-500">{errors.phoneNumber}</p>}
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+          <label htmlFor="email" className="block text-slate-900 dark:text-slate-100 text-sm font-bold mb-2">
             Mail Address <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full p-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 rounded focus:outline-none focus:border-emerald-400"
             placeholder="example@example.com"
             value={formData.email}
             onChange={handleInputChange}
@@ -116,13 +116,13 @@ export default function ContactForm() {
           {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
         <div className="mb-4">
-          <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+          <label htmlFor="description" className="block text-slate-900 dark:text-slate-100 text-sm font-bold mb-2">
             Project Description
           </label>
           <textarea
             id="description"
             name="description"
-            className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full p-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 rounded focus:outline-none focus:border-emerald-400"
             rows={4}
             placeholder="Tell us about your project..."
             value={formData.description}
@@ -132,7 +132,7 @@ export default function ContactForm() {
         <div className="flex justify-center">
           <button
             type="submit"
-            className={`bg-[#3e4355] text-white py-2 px-4 rounded-lg hover:bg-[#292e40] ${(!formData.name || !formData.email || Object.values(errors).some(error => error !== ""))
+            className={`bg-[#3e4355] dark:bg-emerald-500 text-white py-2 px-4 rounded-lg hover:bg-[#292e40] dark:hover:bg-emerald-600 ${(!formData.name || !formData.email || Object.values(errors).some(error => error !== ""))
                 ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             disabled={!formData.name || !formData.email || Object.values(errors).some(error => error !== "")}

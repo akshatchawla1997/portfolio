@@ -1,5 +1,13 @@
 [
     {
+        "date":"Dec 2024 to Present",
+        "company_name":"Freelancer",
+        "description":"Currently working as an independent freelancer on web apps, AI/ML integrations, cloud automation, and no-code/low-code solutions for clients.",
+        "tech_stack":"React, Next.js, Node.js, Django, FastAPI, AWS, GCP, Python, AI",
+        "logo":"",
+        "job_title":"Independent Freelancer"
+    },
+    {
         "date":"October 2024 to December 2024",
         "company_name":"Momentus Digital",
         "description":"",
@@ -8,7 +16,7 @@
         "job_title":"Full Stack Developer"
     },
     {
-        "date":"Dec 2024 to September 2024",
+        "date":"Sep 2024 to Dec 2024",
         "company_name":"Mobrilz",
         "description":"",
         "tech_stack":"Mysql, Next.js, Rasa, React.js, Node.js, Redux, Tanstack, Python, Django, Express.js",
@@ -39,7 +47,6 @@
         "logo":"https://imgs.search.brave.com/iI8b9_GYMI7UD7IxEBTR_V2Ztr-_46_aljXXFpaa4P0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9lL2U4L0Jl/bF9sb2dvLmpwZy8y/MjBweC1CZWxfbG9n/by5qcGc",
         "job_title":"Java Developer Trainee"
     },
-    
     {
         "date":"Feb 2017 to Sept 2019",
         "company_name":"Freelancer.",

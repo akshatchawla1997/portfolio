@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,4 +20,30 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #edf1fd;
+  color: #4e5463;
+}
+
+.dark body {
+  background-color: #020817;
+  color: #e2e8f0;
+}
+
+.dark .text-textColor {
+  color: #cbd5e1;
+}
+
+.dark .text-darkHeadingColor {
+  color: #e2e8f0;
+}
+
+.dark .bg-slate-950\/5 {
+  background-color: rgba(15, 23, 42, 0.75);
+}
+
+.dark .bg-white\/90 {
+  background-color: rgba(255, 255, 255, 0.08);
 }

@@ -55,25 +55,25 @@ const WorkPopUp: React.FC<WorkPopUpProps> = ({ selectedProject, closeModal }) =>
     >
       <motion.div
         ref={modalRef}
-        className="bg-white p-6 rounded-lg w-full max-w-screen-md relative transform transition-transform duration-300 ease-in-out overflow-y-auto"
+        className="bg-white dark:bg-slate-950 p-6 rounded-lg w-full max-w-screen-md relative transform transition-transform duration-300 ease-in-out overflow-y-auto shadow-2xl dark:shadow-black/40"
         onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
       >
-        <button className="absolute top-4 right-4 text-gray-500" onClick={closeModal}>
+        <button className="absolute top-4 right-4 text-slate-600 dark:text-slate-300" onClick={closeModal}>
           <AiOutlineCloseCircle size={24} />
         </button>
-        <h2 className="text-3xl font-bold mb-4">{selectedProject.name}</h2>
+        <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">{selectedProject.name}</h2>
         <div className="mb-4">
-          <h3 className="text-xl font-semibold mb-2">Description</h3>
-          <p className="text-gray-600">{selectedProject.description}</p>
+          <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Description</h3>
+          <p className="text-slate-700 dark:text-slate-300">{selectedProject.description}</p>
         </div>
         <div className="mb-4">
-          <h3 className="text-xl font-semibold mb-2">Skills</h3>
+          <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Skills</h3>
           <div className="flex flex-wrap">
             {selectedProject.tags.map((tag, tagIndex) => (
-              <span key={tagIndex} className="bg-gray-300 text-[#3e4355] px-3 py-1 rounded-full text-sm mr-2 mb-2">
+              <span key={tagIndex} className="bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-3 py-1 rounded-full text-sm mr-2 mb-2">
                 {tag}
               </span>
             ))}
@@ -81,16 +81,16 @@ const WorkPopUp: React.FC<WorkPopUpProps> = ({ selectedProject, closeModal }) =>
         </div>
         <div className="mb-4">
           {selectedProject.link ?
-            (<><h3 className="text-xl font-semibold mb-2">Website Link</h3><p className="text-gray-600">
-              <a href={selectedProject.link} className="text-blue-500">{selectedProject.link}</a>
+            (<><h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Website Link</h3><p className="text-slate-700 dark:text-slate-300">
+              <a href={selectedProject.link} className="text-emerald-500 dark:text-emerald-400 break-words">{selectedProject.link}</a>
             </p></>) : null}
         </div>
         <div className="mb-4">
-          <h3 className="text-xl font-semibold mb-2">Organisation</h3>
+          <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Organisation</h3>
           {selectedProject.organisationLogo && (
             <img src={selectedProject.organisationLogo} alt="Company Logo" className="mt-2 h-10" />
           )}
-          <p className="text-gray-600">{selectedProject.organisationWorkedWith}</p>
+          <p className="text-slate-700 dark:text-slate-300">{selectedProject.organisationWorkedWith}</p>
         </div>
       </motion.div>
     </motion.div>

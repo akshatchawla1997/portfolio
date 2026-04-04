@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import profileImg from "../assets/Profile/profile.png";
-import SocialMediaIcons from "../component/SocialMediaIcons/SocialMediaIcons";
 import { HiOutlineMinus } from "react-icons/hi";
 import { Resume } from "../component/ResumeButton/ResumeButton";
 import { Slide } from "react-awesome-reveal";
@@ -48,14 +47,20 @@ const Home = () => {
 
   return (
     <motion.main
-      className="relative"
+      className="relative px-2 sm:px-4 md:px-8 lg:px-0 max-w-7xl mx-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between  gap-20">
+      <motion.section
+        className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+      >
         <motion.div
-          className="md:w-1/2 lg:w-[30rem] text-center"
+          className="w-full md:w-1/2 lg:w-[30rem] text-center"
           variants={textVariants}
         >
           <div className="text-lg font-bold text-left mb-4 flex">
@@ -74,28 +79,24 @@ const Home = () => {
               <Slide>
                 <h1 className="font-bold text-3xl">Akshat Chawla</h1>
               </Slide>
-              7+ years of experience as Web Developer with a specialization in
+              Systems engineer building automated web applications with frontend,
+              backend, AI, and cloud solutions.
               <span className="font-semibold text-blue-500">
                 {" "}
                 <Typewriter
                   loop={true}
                   words={[
-                    "MERN Stack Developer ",
-                    "Backend Developer",
-                    "React.js Developer",
-                    "Node.js Developer",
-                    "Python Developer",
-                    "Django Developer",
-                    "AI/ML Developer",
-                    "wordpress Developer",
-                    "shopify Developer",
-                    "mobile app developer",
+                    "React & Next.js Applications",
+                    "AI Model Training",
+                    "Orchestration Development",
+                    "Node.js & FastAPI",
+                    "Django Systems",
+                    "AWS, GCP, DigitalOcean",
+                    "Image Classification",
                   ]}
                 />{" "}
               </span>
-              , based in Dehradun, Uttarakhand, India. I'm a passionate engineer
-              eager to contribute my skills and collaborate with teams around
-              the world.
+              based in Dehradun, Uttarakhand.
             </p>
             <div>
               <Resume />
@@ -108,33 +109,43 @@ const Home = () => {
           className="md:w-1/2 w-[20rem] lg:w-[36rem] lg:h-[36rem] rounded-b-full mt-4"
           variants={imgVariants}
         />
-      </section>
-      <section>
-      <CircularButtons />
-      </section>
-      <section className="py-10">
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
+        <CircularButtons />
+      </motion.section>
+      <motion.section
+        className="py-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
         <VennDiagram />
-      </section>
-      <section className="pb-32">
+      </motion.section>
+      <motion.section
+        className="pb-32"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
         <TechStack />
-      </section>
-      {/* <section>
-        <Blogs />
-      </section> */}
-      <section className="py-20">
-      <h2 className="font-semibold text-2xl py-10">My Skills</h2>
+      </motion.section>
+      <motion.section
+        className="py-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
+        <h2 className="font-semibold text-2xl py-10">My Skills</h2>
         <SkillsBarChart />
-      </section>
-      <section className="absolute bottom-[-4rem] flex flex-col lg:flex-row justify-center lg:justify-between w-full items-center pt-48">
-        <motion.div
-          className="text-xl mb-[1rem] m-[2rem] lg:mb-[6rem]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          <SocialMediaIcons />
-        </motion.div>
-      </section>
+      </motion.section>
     </motion.main>
   );
 };

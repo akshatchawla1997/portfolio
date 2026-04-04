@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import  Loader from "../src/component/PortfolioLoader/Loader";
 
@@ -11,27 +11,29 @@ const Resume = lazy(() => import("./pages/Resume/Resume"));
 const Work = lazy(() => import("./pages/Works/Work"));
 
 function AppRoutes() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   useEffect(() => {
     const handleVisibilityChange = () => {
-      // Check if the tab is currently active
       if (document.visibilityState === 'visible') {
-        document.title = 'Akshat Chawla Portfolio'; // Set the title when tab is active
+        document.title = 'Akshat Chawla Portfolio';
       } else {
-        document.title = '😢 Missing You'; // Set a different title when tab is inactive
+        document.title = '😢 Missing You';
       }
     };
 
-    // Add event listener for visibility change
     document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.title = 'Akshat Chawla Portfolio';
 
-    // Set initial title when component mounts
-    document.title = 'Your Website Name';
-
-    // Clean up by removing event listener when component unmounts
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, []); // Run only once when component mounts
+  }, []);
+
   return (
     <Routes>
       <Route
